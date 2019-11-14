@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile-news",
-    "slug": "mobile",
+    "name": "oglobo-news-copycat",
+    "slug": "mobile-news-app",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -25,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Uma cópia simples do app do Globo, conforme proposto em seu desafio.\nA simple copycat of oGlobo app challenge",
+    "githubUrl": "https://github.com/marlonveiga-santos/oglobo-copycat"
   }
 }
