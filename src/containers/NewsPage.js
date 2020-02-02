@@ -22,6 +22,7 @@ function NewsPage(props) {
         <Header secao={evaluator(payload.secao.nome)}
           back={() => navigation.navigate('Headlines')}
           external={payload.urlOriginal}
+          navigation= {props.navigation} 
         />
         <ScrollView>
           <Text style={styles.titulo}>{evaluator(payload.titulo)}</Text>

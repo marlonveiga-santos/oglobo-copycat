@@ -18,11 +18,3 @@ export function linkEvaluator(comparatorItem) {
     }
 }
 
-export function handleLink(comparatorItem) {
-    if (comparatorItem === undefined) {
-        return '';
-    }
-    else {
-        return Linking.openURL(comparatorItem);
-    }
-}

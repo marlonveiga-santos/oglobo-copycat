@@ -9,7 +9,9 @@ export default function Header(props) {
         {backEvaluator(props.back)}
       </Text>
       <Text style={styles.title}>	 <Text>{props.secao}</Text> </Text>
-      <Text style={styles.external} onPress={() => handleLink(props.external)}>
+      <Text style={styles.external} onPress={() => {
+        props.navigation.navigate('ExternalPage', { external_url:props.external })}
+        }>
         {linkEvaluator(props.external)}
       </Text>
     </SafeAreaView>
