@@ -5,7 +5,7 @@ import {
   SafeAreaView,
   ImageBackground,
   ScrollView,
-  View,
+  View
 } from "react-native";
 
 import {
@@ -17,7 +17,7 @@ import {
   imageLoader
 } from "../selectors/newsPageSelectors";
 
-import { linkEvaluator } from '../selectors/headerSelectors';
+import { linkEvaluator } from "../selectors/headerSelectors";
 
 import { AndroidBackHandler } from "react-navigation-backhandler";
 
@@ -126,11 +126,11 @@ const styles = StyleSheet.create({
   },
   external: {
     fontSize: 24,
-    color: '#fff',
-    fontWeight: '900',
+    color: "#fff",
+    fontWeight: "900",
     transform: [{ scaleX: -1 }],
-    padding: '4%',
-  },
+    padding: "4%"
+  }
 });
 
 export default NewsPage;
