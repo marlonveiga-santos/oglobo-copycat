@@ -21,10 +21,9 @@ const Routes = createAppContainer(
       NewsPage: {
         screen: NewsPage,
         navigationOptions: {
-          /* title: "Noticia".toUpperCase(), */
           headerTitleStyle: {
             textAlign: "center",
-            flex: 1
+            flex: 1,
           }
         }
       },
@@ -32,8 +31,7 @@ const Routes = createAppContainer(
         screen: ExternalPage,
         navigationOptions: {
           headerTitleStyle: {
-            textAlign: "center",
-            flex: 1
+            justifyContent:"flex-start"
           }
         }
       }

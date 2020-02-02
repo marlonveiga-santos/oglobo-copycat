@@ -5,7 +5,7 @@ import {
   SafeAreaView,
   ImageBackground,
   ScrollView,
-  View
+  View,
 } from "react-native";
 import Header from "../components/Header";
 
@@ -18,6 +18,8 @@ import {
   imageLoader
 } from "../selectors/newsPageSelectors";
 
+import { linkEvaluator } from '../selectors/headerSelectors';
+
 import { AndroidBackHandler } from "react-navigation-backhandler";
 
 function NewsPage(props) {
@@ -26,7 +28,19 @@ function NewsPage(props) {
 
   React.useEffect(() => {
     navigation.setParams({
-      headerTitle: payload.secao.nome.toUpperCase()
+      headerTitle: payload.secao.nome.toUpperCase(),
+      headerRight: (
+        <Text
+          style={styles.external}
+          onPress={() => {
+            props.navigation.navigate("ExternalPage", {
+              external_url: payload.urlOriginal
+            });
+          }}
+        >
+          {linkEvaluator(payload.urlOriginal)}
+        </Text>
+      )
     });
   }, []);
 
@@ -70,7 +84,8 @@ function NewsPage(props) {
 
 NewsPage.navigationOptions = props => {
   return {
-    title: props.navigation.getParam("headerTitle")
+    title: props.navigation.getParam("headerTitle"),
+    headerRight: props.navigation.getParam("headerRight")
   };
 };
 
@@ -115,7 +130,14 @@ const styles = StyleSheet.create({
     textAlign: "left",
     fontSize: 18,
     padding: "2%"
-  }
+  },
+  external: {
+    fontSize: 24,
+    color: '#fff',
+    fontWeight: '900',
+    transform: [{ scaleX: -1 }],
+    padding: '4%',
+  },
 });
 
 export default NewsPage;
