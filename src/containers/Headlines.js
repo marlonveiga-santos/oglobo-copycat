@@ -19,7 +19,7 @@ function Headlines({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header secao='globo'></Header>
+      {/* <Header secao='globo'></Header> */}
       <ScrollView>
         {
           data.map((item, k) => {
