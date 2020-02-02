@@ -12,19 +12,29 @@ const Routes = createAppContainer(
         screen: Headlines,
         navigationOptions: {
           title: "O globo".toUpperCase(),
-          headerTitleStyle: { 
-            textAlign:"center", 
-            flex:1 
-        },
+          headerTitleStyle: {
+            textAlign: "center",
+            flex: 1
+          }
         }
       },
       NewsPage: {
-        screen: NewsPage
+        screen: NewsPage,
+        navigationOptions: {
+          /* title: "Noticia".toUpperCase(), */
+          headerTitleStyle: {
+            textAlign: "center",
+            flex: 1
+          }
+        }
       },
       ExternalPage: {
         screen: ExternalPage,
         navigationOptions: {
-          headerShown: false
+          headerTitleStyle: {
+            textAlign: "center",
+            flex: 1
+          }
         }
       }
     },

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { newsSource } from '../connections/api';
 import { StyleSheet, SafeAreaView, ScrollView, View } from 'react-native';
-import Header from '../components/Header';
 import { defaultStyle, firstItemStyle } from '../styles/HeadlineItemStyle';
 import HeadlineItems from '../components/HeadlineItems';
 
@@ -19,7 +18,6 @@ function Headlines({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Header secao='globo'></Header> */}
       <ScrollView>
         {
           data.map((item, k) => {
