@@ -1,16 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import Header from '../components/Header';
 
 export default function NotFound(props) {
   const { navigation } = props;
+
+  React.useEffect(() =>{
+    navigation.setParams({ 
+      headerTitle: "404"
+  }) 
+    },[])
+
   return (
     <View style={styles.container}>
-      <Header>Erro</Header>
       <Text>Conteúdo ausente!</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Headlines')} />
     </View>
   );
+}
+
+NotFound.navigationOptions = (props) => {
+  return {
+      title: props.navigation.getParam('headerTitle'),
+  }
 }
 
 const styles = StyleSheet.create({

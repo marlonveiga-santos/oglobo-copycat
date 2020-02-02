@@ -7,7 +7,7 @@ function ExternalPage(props) {
 
   React.useEffect(() =>{
     navigation.setParams({ 
-      headerTitle: "Web- Viewer"
+      headerTitle: "Web - Viewer"
   }) 
     },[])
 

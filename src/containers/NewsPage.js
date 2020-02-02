@@ -7,7 +7,6 @@ import {
   ScrollView,
   View,
 } from "react-native";
-import Header from "../components/Header";
 
 import {
   evaluator,
@@ -50,12 +49,6 @@ function NewsPage(props) {
         style={styles.container}
         onPress={() => navigation.navigate("Headlines")}
       >
-        <Header
-          secao={evaluator(payload.secao.nome)}
-          back={() => navigation.navigate("Headlines")}
-          external={payload.urlOriginal}
-          navigation={props.navigation}
-        />
         <ScrollView>
           <Text style={styles.titulo}>{evaluator(payload.titulo)}</Text>
           <Text style={styles.subTitulo}>{evaluator(payload.subTitulo)}</Text>
