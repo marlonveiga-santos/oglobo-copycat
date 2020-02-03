@@ -19,8 +19,6 @@ import {
 
 import WebviewButton from "../components/WebviewButton";
 
-import { AndroidBackHandler } from "react-navigation-backhandler";
-
 function NewsPage(props) {
   const { navigation } = props;
   const payload = navigation.getParam("payload");
@@ -38,34 +36,32 @@ function NewsPage(props) {
   }, []);
 
   return (
-    <AndroidBackHandler onBackPress={() => navigation.navigate("Headlines")}>
-      <SafeAreaView
-        style={styles.container}
-        onPress={() => navigation.navigate("Headlines")}
-      >
-        <ScrollView>
-          <Text style={styles.titulo}>{evaluator(payload.titulo)}</Text>
-          <Text style={styles.subTitulo}>{evaluator(payload.subTitulo)}</Text>
-          <Text style={styles.porData}>{byEvaluator(payload.autores)}</Text>
-          <Text style={styles.porData}>
-            &#128344; {dateEvaluator(payload.publicadoEm)}
-          </Text>
-          <View>
-            <ImageBackground
-              source={imageLoader(payload.imagens.map(item => item.url))}
-              style={styles.imagem}
-            >
-              <Text style={styles.legenda}>
-                {legendEvaluator(payload.imagens.map(item => item.legenda))}
-              </Text>
-            </ImageBackground>
-          </View>
-          <View>
-            <Text style={styles.texto}>{textEvaluator(payload.texto)}</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </AndroidBackHandler>
+    <SafeAreaView
+      style={styles.container}
+      onPress={() => navigation.navigate("Headlines")}
+    >
+      <ScrollView>
+        <Text style={styles.titulo}>{evaluator(payload.titulo)}</Text>
+        <Text style={styles.subTitulo}>{evaluator(payload.subTitulo)}</Text>
+        <Text style={styles.porData}>{byEvaluator(payload.autores)}</Text>
+        <Text style={styles.porData}>
+          &#128344; {dateEvaluator(payload.publicadoEm)}
+        </Text>
+        <View>
+          <ImageBackground
+            source={imageLoader(payload.imagens.map(item => item.url))}
+            style={styles.imagem}
+          >
+            <Text style={styles.legenda}>
+              {legendEvaluator(payload.imagens.map(item => item.legenda))}
+            </Text>
+          </ImageBackground>
+        </View>
+        <View>
+          <Text style={styles.texto}>{textEvaluator(payload.texto)}</Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
