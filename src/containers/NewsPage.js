@@ -129,7 +129,8 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "900",
     transform: [{ scaleX: -1 }],
-    padding: "4%"
+    padding: "4%",
+    marginRight:"26px"
   }
 });
 
