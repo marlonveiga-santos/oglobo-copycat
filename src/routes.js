@@ -32,6 +32,7 @@ const Routes = createAppContainer(
         navigationOptions: {
           headerTitleStyle: {
             textAlign: "center",
+            flex: 1
           }
         }
       }
@@ -41,7 +42,7 @@ const Routes = createAppContainer(
         headerTintColor: "#fff",
         headerBackTitleVisible: false,
         headerStyle: {
-          backgroundColor: "#125e92"
+          backgroundColor: "#125e92",
         }
       }
     }

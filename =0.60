@@ -1,0 +1,33 @@
+
+> core-js@2.6.11 postinstall /home/marlon/Desktop/oglobo-copycat/oglobo-copycat/node_modules/fbjs-scripts/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> core-js@2.6.11 postinstall /home/marlon/Desktop/oglobo-copycat/oglobo-copycat/node_modules/metro-babel-register/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> core-js@2.6.11 postinstall /home/marlon/Desktop/oglobo-copycat/oglobo-copycat/node_modules/metro/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> core-js@2.6.11 postinstall /home/marlon/Desktop/oglobo-copycat/oglobo-copycat/node_modules/react-native/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
++ react@16.12.0
++ react-native@0.59.8
+added 2 packages from 1 contributor, updated 32 packages and audited 37654 packages in 78.7s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 14 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
