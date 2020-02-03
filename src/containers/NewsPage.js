@@ -74,7 +74,6 @@ NewsPage.navigationOptions = props => {
 
 const styles = StyleSheet.create({
   container: {
-    minHeight: "100%"
   },
   titulo: {
     color: "#19334c",
@@ -112,7 +111,8 @@ const styles = StyleSheet.create({
   texto: {
     textAlign: "left",
     fontSize: 18,
-    padding: "2%"
+    padding: 14,
+    marginBottom:25
   },
   external: {
     fontSize: 24,
