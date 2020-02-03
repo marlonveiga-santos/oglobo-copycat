@@ -17,7 +17,7 @@ import {
   imageLoader
 } from "../selectors/newsPageSelectors";
 
-import { linkEvaluator } from "../selectors/headerSelectors";
+import WebviewButton from "../components/WebviewButton";
 
 import { AndroidBackHandler } from "react-navigation-backhandler";
 
@@ -29,16 +29,10 @@ function NewsPage(props) {
     navigation.setParams({
       headerTitle: payload.secao.nome.toUpperCase(),
       headerRight: (
-        <Text
-          style={styles.external}
-          onPress={() => {
-            props.navigation.navigate("ExternalPage", {
-              external_url: payload.urlOriginal
-            });
-          }}
-        >
-          {linkEvaluator(payload.urlOriginal)}
-        </Text>
+        <WebviewButton
+          externalUrl={payload.urlOriginal}
+          navigation={navigation.navigate}
+        />
       )
     });
   }, []);
@@ -129,7 +123,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "900",
     transform: [{ scaleX: -1 }],
-    marginRight:24
+    marginRight: 24
   }
 });
 
