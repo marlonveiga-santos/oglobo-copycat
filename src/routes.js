@@ -31,7 +31,7 @@ const Routes = createAppContainer(
         screen: ExternalPage,
         navigationOptions: {
           headerTitleStyle: {
-            justifyContent:"flex-start"
+            textAlign: "center",
           }
         }
       }
